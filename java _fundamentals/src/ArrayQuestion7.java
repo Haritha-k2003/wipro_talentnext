@@ -11,20 +11,19 @@ public class ArrayQuestion7 {
 			arr[i]=sc.nextInt();
 			
 		}
-		int sum=0;
-		boolean ignore=false;
 		for(int i=0;i<n;i++) {
-			if(arr[i]==6) {
-				ignore=true;
+			boolean isDuplicate=false;
+			for(int j=i+1;j<n;j++) {
+				if(arr[i]==arr[j]) {
+					isDuplicate=true;
+					break;
+				}
 			}
-			if(!ignore) {
-				sum +=arr[i];
-			}
-			if(ignore && arr[i]==7) {
-				ignore=false;
+			if(!isDuplicate) {
+				System.out.println(arr[i]);
 			}
 		}
-		System.out.println(sum);;
+		
 
 	}
 

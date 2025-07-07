@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ArrayQuestion6 {
+public class ArrayQuestion9 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -11,21 +11,22 @@ public class ArrayQuestion6 {
 			arr[i]=sc.nextInt();
 			
 		}
-		for(int i=0;i<n;i++) {
-			for(int j=i+1;j<n;j++) {
-				if(arr[i]>arr[j]) {
-					int temp=arr[i];
-					arr[i]=arr[j];
-					arr[j]=temp;
-				}
-				
+		int index=0;
+		for(int i=0;i<n;i++){
+			if(arr[i]!=10) {
+				arr[index]=arr[i];
+				index++;
 			}
-			
+		}
+		while(index<n) {
+			arr[index]=0;
+			index++;
 		}
 		for(int i=0;i<n;i++) {
 			System.out.println(arr[i]);
 		}
-		
+
 	}
+	
 
 }
